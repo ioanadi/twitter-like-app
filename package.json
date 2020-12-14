@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "axios": "^0.21.0",
-    "lodash": "^4.17.20",
     "retry-axios": "^2.4.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",

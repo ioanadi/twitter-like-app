@@ -2,11 +2,11 @@ import { AxiosResponse } from 'axios'
 import baseApi, { BaseApi } from './baseApi'
 
 export interface TweetModel {
-    id: string;
-    image: string;
-    text: string;
-    timeStamp: number;
-    username: string;
+    readonly id: string;
+    readonly image: string;
+    readonly text: string;
+    readonly timeStamp: number;
+    readonly username: string;
 }
 
 const TWEET_COUNT_PER_REQUEST = 10

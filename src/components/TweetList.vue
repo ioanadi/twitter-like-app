@@ -8,11 +8,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import _ from 'lodash'
 import Tweet from './Tweet.vue'
 import { TweetModel } from '@/services/tweet'
 
-// The list will update every 2 seconds //
+// The user will se a list update every 2 seconds //
 const LIST_UPDATE_INTERVAL = 2000
 
 @Component({
@@ -27,7 +26,7 @@ export default class TweetList extends Vue {
 
     mounted() {
         this.updateEventId = setInterval(() => {
-            this.periodicallyUpdatedList = _.cloneDeep(this.tweets)
+            this.periodicallyUpdatedList = this.tweets.slice()
 
         }, LIST_UPDATE_INTERVAL)
     }
