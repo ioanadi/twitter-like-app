@@ -48,6 +48,12 @@ export default class TwitterFeed extends Vue {
     updateFeed() {
         return tweetService.getTweetsCreatedAfterTime(this.latestTweetTimestamp)
             .then((list: TweetModel[]) => {
+                if (list.length === 0) {
+                    // the database is full and reset is needed
+                    this.resetDb()
+                    return
+                }
+                
                 this.tweets.unshift(...list)
                 this.latestTweetTimestamp = list[0].timeStamp
 
