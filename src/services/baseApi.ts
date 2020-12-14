@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosResponse } from 'axios'
 import * as rax from 'retry-axios'
 
 
-const BASE_URL = 'http://bumble-twitter-interview.herokuapp.com/ioana-dinca'
+const BASE_URL = 'https://bumble-twitter-interview.herokuapp.com/ioana-dinca'
 
 export class BaseApi {
     public api: AxiosInstance
