@@ -80,8 +80,8 @@ export default class TwitterFeed extends Vue {
 }
 .twitter-feed > button {
     position: absolute;
-    right: 2.5rem;
-    top: 2.5rem;
+    right: 1.5rem;
+    top: 1.5rem;
     margin: .5rem;
 }
 </style>
